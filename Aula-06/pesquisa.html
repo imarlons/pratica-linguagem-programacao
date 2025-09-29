@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Pesquisando Cadastros por Cidade</title>
+</head>
+
+<body>
+    <form name="pesquisa" action="pesquisa-cidade.php" method="post">
+        <!-- rótulo para a seleção de cidade -->
+        <label>Selecione a Cidade: </label>
+        <!-- elemento de seleção (dropdown) com o nome "cidade"  -->
+        <select name="cidade">
+            <option value="palhoca">Palhoça</option>
+            <option value="santo-amaro">Santo Amaro</option>
+            <option value="sao-jose">São José</option>
+            <option value="biguacu">Biguaçu</option>
+            <option value="florianopolis">Florianópolis</option>
+        </select><br>
+        <input type="submit" name="enviar" value="Enviar">
+    </form>
+
+</body>
+
+</html>
