@@ -1,0 +1,47 @@
+este script cria o banco de dados, a tabela de alunos e insere 5 registros de exemplo.
+--------------------------------------------------------------------------------------
+
+1. criação do banco de dados
+
+CREATE DATABASE IF NOT EXISTS `atividades_php` 
+DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+--------------------------------------------------------------------------------------
+
+informa ao MySQL para usar o banco de dados recém-criado para os próximos comandos.
+USE `atividades_php`;
+
+--------------------------------------------------------------------------------------
+
+2. criação da tabela `alunos`
+
+CREATE TABLE IF NOT EXISTS `alunos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  `matricula` varchar(50) NOT NULL,
+  `curso` varchar(100) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `telefone` varchar(20) DEFAULT NULL,
+  `endereco` varchar(255) DEFAULT NULL,
+  `cep` varchar(10) DEFAULT NULL,
+  `cidade` varchar(100) DEFAULT NULL,
+  `uf` varchar(2) DEFAULT NULL,
+  `curso_horas` varchar(255) DEFAULT NULL,
+  `carga_horaria` int(11) DEFAULT 0,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `matricula` (`matricula`)
+);
+
+--------------------------------------------------------------------------------------
+
+3. inserção de 5 conjuntos de dados de exemplo
+insere 5 alunos na tabela `alunos`.
+
+INSERT INTO `alunos` (`nome`, `matricula`, `curso`, `email`, `telefone`, `endereco`, `cep`, `cidade`, `uf`, `curso_horas`, `carga_horaria`) VALUES
+('Ana Clara Souza', '20230101', 'Análise e Desenvolvimento de Sistemas', 'ana.souza@email.com', '(48) 99911-1111', 'Rua das Flores, 123', '88130-000', 'Palhoça', 'SC', 'Python para Web', 40),
+('Bruno Martins', '20230102', 'Engenharia de Software', 'bruno.martins@email.com', '(48) 99922-2222', 'Avenida Central, 456', '88131-100', 'Palhoça', 'SC', 'Gestão de Projetos Ágeis', 25),
+('Carla Dias', '20230103', 'Ciência da Computação', 'carla.dias@email.com', '(48) 99933-3333', 'Travessa das Palmeiras, 789', '88132-200', 'São José', 'SC', 'Introdução a UX/UI Design', 30),
+('Daniel Ferreira', '20230104', 'Análise e Desenvolvimento de Sistemas', 'daniel.f@email.com', '(48) 99944-4444', 'Rua dos Coqueiros, 101', '88010-000', 'Florianópolis', 'SC', 'Banco de Dados Avançado', 60),
+('Eduarda Lima', '20230105', 'Redes de Computadores', 'eduarda.lima@email.com', '(48) 99955-5555', 'Avenida das Rendeiras, 212', '88015-150', 'Florianópolis', 'SC', 'Segurança da Informação', 55);
+
+--------------------------------------------------------------------------------------
