@@ -16,6 +16,6 @@ $usuario_logado = $_SESSION['usuario'];
 ?>
 
 <div class="auth-info">
-    <span>Usuário logado: <strong class="resultado-pos"><?php echo htmlspecialchars($usuario_logado); ?></strong></span>
-    <a href="logout.php" class="button-logout">Logout</a>
+    <span>LOGADO COM: <strong class="resultado-pos"><?php echo htmlspecialchars($usuario_logado); ?></strong></span>
+    <a href="logout.php" class="button-logout">SAIR</a>
 </div>
