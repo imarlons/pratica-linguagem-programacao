@@ -154,3 +154,25 @@ body {
     border-radius: 5px;
     margin-top: 20px;
 }
+
+/* --- ADICIONADO: Estilos para Classificação de Idade (Ex. 9) --- */
+.idade-crianca {
+    color: #007bff;
+}
+
+/* Azul */
+.idade-adolescente {
+    color: #6f42c1;
+}
+
+/* Roxo */
+.idade-adulto {
+    color: #28a745;
+}
+
+/* Verde */
+.idade-idoso {
+    color: #fd7e14;
+}
+
+/* Laranja */

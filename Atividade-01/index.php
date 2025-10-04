@@ -26,8 +26,8 @@ require_once 'includes/auth.php';
         <li><a href="exercicios/EX08.php">Exercício 8 - Cálculo da Média Final de um Aluno</a></li>
         <li><a href="exercicios/EX09.php">Exercício 9 - Verificação de Maioridade</a></li>
         <li><a href="exercicios/EX10.php">Exercício 10 - Identificação do Mês pelo Número</a></li>
-        <li><a href="exercicios/EX011php">Exercício 11 - Cadastro de Alunos e Carga Horária</a></li>
-        <li><a href="exercicios/EX012.php">Exercício 12 - Realizando Buscas e Exclusão de Registros</a></li>
+        <li><a href="exercicios/EX11.php">Exercício 11 - Cadastro de Alunos e Carga Horária</a></li>
+        <li><a href="exercicios/EX12.php">Exercício 12 - Realizando Buscas e Exclusão de Registros</a></li>
     </ul>
 </body>
 
