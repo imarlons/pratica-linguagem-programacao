@@ -107,3 +107,50 @@ body {
     border-radius: 5px;
     margin-top: 20px;
 }
+
+/* --- ADICIONADO: Estilos de texto para Exercício 6 --- */
+.texto-verde {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.texto-amarelo {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+.texto-vermelho {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* --- ADICIONADO: Estilos para Situação do Aluno (Ex. 8) --- */
+.situacao-aprovado {
+    background-color: #d4edda;
+    /* Verde */
+    color: #155724;
+    padding: 15px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.situacao-recuperacao {
+    background-color: #fff3cd;
+    /* Amarelo */
+    color: #856404;
+    padding: 15px;
+    border: 1px solid #ffeeba;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.situacao-reprovado {
+    background-color: #f8d7da;
+    /* Vermelho */
+    color: #721c24;
+    padding: 15px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    margin-top: 20px;
+}
