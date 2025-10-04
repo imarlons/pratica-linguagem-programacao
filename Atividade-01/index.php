@@ -8,14 +8,13 @@ require_once 'includes/auth.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Exercícios PHP</title>
-    <link rel="stylesheet" href="style.css">
+    <title>[ INDEX | LISTA DE EXERCÍCIOS ]</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>Lista de Exercícios PHP</h1>
+    <h1>Lista de Exercícios</h1>
 
-    <p>Selecione um exercício para começar:</p>
     <ul>
         <li><a href="exercicio01.html">Exercício 1 - Verificação de Número Positivo, Negativo ou Zero</a></li>
         <li><a href="exercicio02.html">Exercício 2 - Tabuada de um Número</a></li>

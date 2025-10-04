@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Cores dos Resultados */
+.resultado-pos {
+    /* Usado para Positivo, Sucesso, Aprovado, Logado, Par (Ex. 5 - Par é Amarelo) */
+    color: #008000;
+    /* Verde */
+    font-weight: bold;
+}
+
+.resultado-neg {
+    /* Usado para Negativo, Erro, Reprovado */
+    color: #FF0000;
+    /* Vermelho */
+    font-weight: bold;
+}
+
+.resultado-zero {
+    /* Usado para Igual a Zero */
+    color: #0000FF;
+    /* Azul */
+    font-weight: bold;
+}
+
+/* Específicos do Exercício 5 */
+.resultado-par {
+    /* Amarelo para Par, conforme Ex. 5 */
+    color: #CCCC00;
+    font-weight: bold;
+}
+
+.resultado-impar {
+    /* Roxo para Ímpar, conforme Ex. 5 */
+    color: #800080;
+    font-weight: bold;
+}
+
+/* Estilos de Estrutura */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Estilo para a informação de autenticação */
+.auth-info {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.button-logout {
+    margin-left: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: #f44336;
+    color: white;
+    border-radius: 4px;
+}
+
+/* Estilo para o histórico de cookies */
+.historico {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px dashed #aaa;
+    background-color: #f9f9f9;
+    font-size: 0.9em;
+}
+
+/* Botão de voltar */
+.btn-voltar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #5cb85c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
