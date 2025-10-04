@@ -3,42 +3,36 @@ body {
     padding: 20px;
 }
 
-/* Cores dos Resultados */
+/*  cores dos resultados */
 .resultado-pos {
-    /* Usado para Positivo, Sucesso, Aprovado, Logado, Par (Ex. 5 - Par é Amarelo) */
     color: #008000;
     /* Verde */
     font-weight: bold;
 }
 
 .resultado-neg {
-    /* Usado para Negativo, Erro, Reprovado */
+    /* usado para negativo, erro, reprovado */
     color: #FF0000;
-    /* Vermelho */
     font-weight: bold;
 }
 
 .resultado-zero {
-    /* Usado para Igual a Zero */
     color: #0000FF;
-    /* Azul */
     font-weight: bold;
 }
 
-/* Específicos do Exercício 5 */
+/* específicos do exercício 5 */
 .resultado-par {
-    /* Amarelo para Par, conforme Ex. 5 */
     color: #CCCC00;
     font-weight: bold;
 }
 
 .resultado-impar {
-    /* Roxo para Ímpar, conforme Ex. 5 */
     color: #800080;
     font-weight: bold;
 }
 
-/* Estilos de Estrutura */
+/* estilos de estrutura */
 .container {
     max-width: 600px;
     margin: 0 auto;
@@ -47,7 +41,7 @@ body {
     border-radius: 8px;
 }
 
-/* Estilo para a informação de autenticação */
+/* estilo para a informação de autenticação */
 .auth-info {
     position: fixed;
     top: 10px;
@@ -68,7 +62,7 @@ body {
     border-radius: 4px;
 }
 
-/* Estilo para o histórico de cookies */
+/* estilo para o histórico de cookies */
 .historico {
     margin-top: 15px;
     padding: 10px;
@@ -77,7 +71,7 @@ body {
     font-size: 0.9em;
 }
 
-/* Botão de voltar */
+/* botão de voltar */
 .btn-voltar {
     display: inline-block;
     margin-top: 20px;
@@ -90,7 +84,6 @@ body {
 
 .resultado-sucesso {
     background-color: #d4edda;
-    /* Fundo verde claro */
     color: #155724;
     padding: 15px;
     border: 1px solid #c3e6cb;
@@ -100,7 +93,6 @@ body {
 
 .resultado-erro {
     background-color: #f8d7da;
-    /* Fundo vermelho claro */
     color: #721c24;
     padding: 15px;
     border: 1px solid #f5c6cb;
@@ -108,7 +100,7 @@ body {
     margin-top: 20px;
 }
 
-/* --- ADICIONADO: Estilos de texto para Exercício 6 --- */
+/* --- estilos de texto para exercício 6 --- */
 .texto-verde {
     color: #28a745;
     font-weight: bold;
@@ -124,7 +116,7 @@ body {
     font-weight: bold;
 }
 
-/* --- ADICIONADO: Estilos para Situação do Aluno (Ex. 8) --- */
+/* --- estilos para situação do aluno (Ex. 8) --- */
 .situacao-aprovado {
     background-color: #d4edda;
     /* Verde */
@@ -137,7 +129,6 @@ body {
 
 .situacao-recuperacao {
     background-color: #fff3cd;
-    /* Amarelo */
     color: #856404;
     padding: 15px;
     border: 1px solid #ffeeba;
@@ -147,7 +138,6 @@ body {
 
 .situacao-reprovado {
     background-color: #f8d7da;
-    /* Vermelho */
     color: #721c24;
     padding: 15px;
     border: 1px solid #f5c6cb;
@@ -155,7 +145,7 @@ body {
     margin-top: 20px;
 }
 
-/* --- ADICIONADO: Estilos para Classificação de Idade (Ex. 9) --- */
+/* --- estilos para classificação de idade (Ex. 9) --- */
 .idade-crianca {
     color: #007bff;
 }
@@ -214,14 +204,13 @@ body {
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
-    /* Garante que o padding não afete a largura total */
+    /* garante que o padding não afete a largura total */
 }
 
 .login-container input[type="submit"] {
     width: 100%;
     padding: 12px;
     background-color: #007bff;
-    /* Azul primário */
     color: white;
     border: none;
     border-radius: 4px;
@@ -233,5 +222,49 @@ body {
 
 .login-container input[type="submit"]:hover {
     background-color: #0056b3;
-    /* Azul mais escuro no hover */
+}
+
+/* --- estilos para o index --- */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.exercise-grid {
+    display: grid;
+    /* cria colunas responsivas: o máximo que couber com no mínimo 250px */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    /* espaçamento entre os cartões */
+}
+
+.exercise-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: block;
+}
+
+.exercise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.exercise-card h2 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #007bff;
+}
+
+.exercise-card p {
+    font-size: 0.9em;
+    color: #666;
 }

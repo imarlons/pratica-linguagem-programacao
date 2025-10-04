@@ -1,5 +1,5 @@
 <?php
-// Inclui o script de autenticação para proteger a página e mostrar o usuário logado
+// inclui o script de autenticação para proteger a página
 require_once 'includes/auth.php';
 ?>
 <!DOCTYPE html>
@@ -13,22 +13,66 @@ require_once 'includes/auth.php';
 </head>
 
 <body>
-    <h1>Lista de Exercícios</h1>
+    <div class="container">
+        <div class="page-header">
+            <h1>Lista de Exercícios</h1>
+            <div class="auth-info">
+                <span>LOGADO COM: <strong class="resultado-pos"><?= htmlspecialchars($_SESSION['usuario']) ?></strong></span>
+                <a href="logout.php" class="button-logout">SAIR</a>
+            </div>
+        </div>
 
-    <ul>
-        <li><a href="exercicios/EX01.php">Exercício 1 - Verificação de Número Positivo, Negativo ou Zero</a></li>
-        <li><a href="exercicios/EX02.php">Exercício 2 - Tabuada de um Número</a></li>
-        <li><a href="exercicios/EX03.php">Exercício 3 - Cálculo do Fatorial com Recursão</a></li>
-        <li><a href="exercicios/EX04.php">Exercício 4 - Calculadora com SwitchCase</a></li>
-        <li><a href="exercicios/EX05.php">Exercício 5 - Verificação de Número Par ou Ímpar</a></li>
-        <li><a href="exercicios/EX06.php">Exercício 6 - Impressão de Valores em Ordem Crescente</a></li>
-        <li><a href="exercicios/EX07.php">Exercício 7 - Comparação de Valores A e B</a></li>
-        <li><a href="exercicios/EX08.php">Exercício 8 - Cálculo da Média Final de um Aluno</a></li>
-        <li><a href="exercicios/EX09.php">Exercício 9 - Verificação de Maioridade</a></li>
-        <li><a href="exercicios/EX10.php">Exercício 10 - Identificação do Mês pelo Número</a></li>
-        <li><a href="exercicios/EX11.php">Exercício 11 - Cadastro de Alunos e Carga Horária</a></li>
-        <li><a href="exercicios/EX12.php">Exercício 12 - Realizando Buscas e Exclusão de Registros</a></li>
-    </ul>
+        <div class="exercise-grid">
+            <a href="exercicios/EX01.php" class="exercise-card">
+                <h2>Exercício 1</h2>
+                <p>Verificação de Número Positivo, Negativo ou Zero</p>
+            </a>
+            <a href="exercicios/EX02.php" class="exercise-card">
+                <h2>Exercício 2</h2>
+                <p>Tabuada de um Número</p>
+            </a>
+            <a href="exercicios/EX03.php" class="exercise-card">
+                <h2>Exercício 3</h2>
+                <p>Cálculo do Fatorial com Recursão</p>
+            </a>
+            <a href="exercicios/EX04.php" class="exercise-card">
+                <h2>Exercício 4</h2>
+                <p>Calculadora com SwitchCase</p>
+            </a>
+            <a href="exercicios/EX05.php" class="exercise-card">
+                <h2>Exercício 5</h2>
+                <p>Verificação de Número Par ou Ímpar</p>
+            </a>
+            <a href="exercicios/EX06.php" class="exercise-card">
+                <h2>Exercício 6</h2>
+                <p>Impressão de Valores em Ordem Crescente</p>
+            </a>
+            <a href="exercicios/EX07.php" class="exercise-card">
+                <h2>Exercício 7</h2>
+                <p>Comparação de Valores A e B</p>
+            </a>
+            <a href="exercicios/EX08.php" class="exercise-card">
+                <h2>Exercício 8</h2>
+                <p>Cálculo da Média Final de um Aluno</p>
+            </a>
+            <a href="exercicios/EX09.php" class="exercise-card">
+                <h2>Exercício 9</h2>
+                <p>Verificação de Maioridade</p>
+            </a>
+            <a href="exercicios/EX10.php" class="exercise-card">
+                <h2>Exercício 10</h2>
+                <p>Identificação do Mês pelo Número</p>
+            </a>
+            <a href="exercicios/EX11.php" class="exercise-card">
+                <h2>Exercício 11</h2>
+                <p>Cadastro de Alunos e Carga Horária (BD)</p>
+            </a>
+            <a href="exercicios/EX12.php" class="exercise-card">
+                <h2>Exercício 12</h2>
+                <p>Busca e Exclusão de Registros (BD)</p>
+            </a>
+        </div>
+    </div>
 </body>
 
 </html>
