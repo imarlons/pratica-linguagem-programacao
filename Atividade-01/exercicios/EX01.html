@@ -1,0 +1,38 @@
+<?php
+// Inclui o script de autenticação para proteger a página
+require_once 'includes/auth.php'; 
+// Lê o último valor do cookie DENTRO do bloco PHP
+$ultimo_valor = $_COOKIE['ex01_ultimo'] ?? 'N/A';
+?>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 1 - Positivo, Negativo ou Zero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Exercício 1: Verificação de Número</h1>
+        <p>Informe um número para saber se é positivo, negativo ou zero.</p>
+
+        <div class="historico">
+            Último valor usado: <span class="resultado-zero">
+                <?php echo htmlspecialchars($ultimo_valor); ?>
+            </span>
+        </div>
+
+        <form action="EX01.php" method="POST">
+            <label for="numero">Número:</label>
+            <input type="number" step="any" id="numero" name="numero" required><br><br>
+            <input type="submit" value="Verificar">
+        </form>
+
+        <a href="index.php" class="btn-voltar">Voltar para a Página Inicial</a>
+    </div>
+</body>
+
+</html>

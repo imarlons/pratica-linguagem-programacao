@@ -7,7 +7,7 @@ if (session_status() === PHP_SESSION_NONE) {
 // verifica se a variável de sessão 'usuario' existe
 if (!isset($_SESSION['usuario'])) {
     // se não estiver logado, redireciona para a página de login (login.html ou login.php)
-    header("Location: login.html");
+    header("Location: ../login.html");
     exit;
 }
 
