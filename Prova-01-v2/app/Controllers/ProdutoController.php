@@ -61,10 +61,10 @@ class ProdutoController
         require_once '../public/views/formulario.php';
     }
 
-    //  ação: Salvar um novo produto (create)
+    //  ação: salvar um novo produto (create)
     public function salvar()
     {
-        // Cria um objeto Produto com os dados do formulário (post)
+        // cria um objeto Produto com os dados do formulário (post)
         $produto = new Produto(
             $_POST['nome_produto'],
             $_POST['descricao'],
@@ -79,7 +79,7 @@ class ProdutoController
         header('Location: index.php?acao=listar');
     }
 
-    //  ação: Atualizar um produto existente (update)
+    //  ação: atualizar um produto existente (update)
     public function atualizar()
     {
         // pega os dados do formulário (post)
