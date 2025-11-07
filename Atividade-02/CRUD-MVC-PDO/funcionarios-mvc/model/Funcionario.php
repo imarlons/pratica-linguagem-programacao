@@ -67,17 +67,40 @@ abstract class Funcionario
             $tipo = 'desenvolvedor';
         }
 
-        // se tem id, atualiza (update)
+        $stmt = null; // inicializa a variável
+
+        // se tem id, atualiza (Update)
         if ($this->id) {
             $query = "UPDATE funcionarios SET nome = :nome, salario = :salario, tipo = :tipo WHERE id = :id";
             $stmt = $this->db->prepare($query);
+
+            if ($stmt === false) {
+                echo "<h1>Erro Fatal ao preparar a query (UPDATE)!</h1>";
+                echo "<pre>Query: $query</pre>";
+                echo "<pre>Erro do Banco: ";
+                print_r($this->db->errorInfo()); // mostra o erro real do PDO
+                echo "</pre>";
+                die(); // para o script
+            }
+
             $stmt->bindParam(':id', $this->id);
         }
         // se não tem id, cria (create)
         else {
             $query = "INSERT INTO funcionarios (nome, salario, tipo) VALUES (:nome, :salario, :tipo)";
+            $stmt = $this->db->prepare($query);
+
+            if ($stmt === false) {
+                echo "<h1>Erro Fatal ao preparar a query (INSERT)!</h1>";
+                echo "<pre>Query: $query</pre>";
+                echo "<pre>Erro do Banco: ";
+                print_r($this->db->errorInfo()); // mostra o erro real do PDO
+                echo "</pre>";
+                die(); // para o script
+            }
         }
 
+        // se chegou até aqui, $stmt é válido
         $stmt->bindParam(':nome', $this->nome);
         $stmt->bindParam(':salario', $this->salario);
         $stmt->bindParam(':tipo', $tipo);
@@ -85,7 +108,7 @@ abstract class Funcionario
         try {
             return $stmt->execute();
         } catch (PDOException $e) {
-            echo "Erro ao salvar: " . $e->getMessage();
+            echo "Erro ao executar a query: " . $e->getMessage();
             return false;
         }
     }

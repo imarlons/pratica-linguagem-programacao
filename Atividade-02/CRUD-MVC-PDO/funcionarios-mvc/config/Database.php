@@ -2,7 +2,7 @@
 
 class Database
 {
-    private $host = '127.0.0.1';
+    private $host = 'localhost';
     private $db_name = 'empresa';
     private $username = 'root';
     private $password = '';
@@ -22,7 +22,7 @@ class Database
             );
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
-            echo 'Erro de conexão: ' . $e->getMessage();
+            die('Erro de conexão: ' . $e->getMessage());
         }
         return $this->conn;
     }
