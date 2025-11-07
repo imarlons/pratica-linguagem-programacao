@@ -19,7 +19,7 @@
     <div class="container">
         <h1>Lista de Produtos Cadastrados</h1>
 
-        <a href="index.php?acao=formularioCadastro" class="btn btn-secondary">Cadastrar Novo Produto</a>
+        <a href="index.php?acao=formularioCadastro" class="btn btn-success">Cadastrar Novo Produto</a>
 
         <h2>Produtos</h2>
         <table>
