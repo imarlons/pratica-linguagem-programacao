@@ -21,6 +21,7 @@
                     <th>Salário Base (R$)</th>
                     <th>Bonificação (R$)</th>
                     <th>Salário Total (R$)</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
@@ -30,10 +31,16 @@
                         <td><?php echo htmlspecialchars($func->getNome()); ?></td>
                         <td><?php echo get_class($func); ?></td>
                         <td><?php echo number_format($func->getSalario(), 2, ',', '.'); ?></td>
-
                         <td><?php echo number_format($func->getBonificacao(), 2, ',', '.'); ?></td>
-
                         <td><?php echo number_format($func->getSalarioTotal(), 2, ',', '.'); ?></td>
+
+                        <td class="acoes">
+                            <a href="index.php?action=editar&id=<?php echo $func->getId(); ?>" class="btn-editar">Editar</a>
+                            <a href="index.php?action=excluir&id=<?php echo $func->getId(); ?>" class="btn-excluir"
+                                onclick="return confirm('Tem certeza que deseja excluir <?php echo htmlspecialchars($func->getNome()); ?>?');">
+                                Excluir
+                            </a>
+                        </td>
 
                     </tr>
                 <?php endforeach; ?>
