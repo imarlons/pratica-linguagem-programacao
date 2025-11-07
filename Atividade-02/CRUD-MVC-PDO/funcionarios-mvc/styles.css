@@ -1,0 +1,163 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    color: #2c3e50;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* --- tabela (listar) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* --- formulário (criar/editar) --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: -5px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* garante que o padding não afete a largura total */
+}
+
+button[type="submit"],
+.btn-novo,
+a {
+    display: inline-block;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button[type="submit"] {
+    background-color: #2ecc71;
+    color: white;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    background-color: #27ae60;
+}
+
+.btn-novo {
+    background-color: #3498db;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.btn-novo:hover {
+    background-color: #2980b9;
+}
+
+a {
+    color: #3498db;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- estilos para Botões de ação na tabela --- */
+
+td.acoes {
+    text-align: center;
+    white-space: nowrap;
+    /* impede que os botões quebrem linha */
+}
+
+.btn-editar,
+.btn-excluir {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    margin: 0 2px;
+}
+
+.btn-editar {
+    background-color: #f0ad4e;
+    /* laranja */
+}
+
+.btn-editar:hover {
+    background-color: #ec971f;
+    text-decoration: none;
+}
+
+.btn-excluir {
+    background-color: #d9534f;
+    /* vermelho */
+}
+
+.btn-excluir:hover {
+    background-color: #c9302c;
+    text-decoration: none;
+}
+
+/* ajuste no formulário de edição (input desabilitado) */
+input:disabled,
+input:read-only {
+    background-color: #eee;
+    cursor: not-allowed;
+    color: #555;
+}
