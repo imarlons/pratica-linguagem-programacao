@@ -49,7 +49,7 @@ abstract class Funcionario
     // método abstrato que força as classes filhas a implementar 
     abstract public function getBonificacao(): float;
 
-    // Método final que usa o polimorfismo
+    // método final que usa o polimorfismo
     public final function getSalarioTotal(): float
     {
         return $this->salario + $this->getBonificacao();
@@ -119,5 +119,53 @@ abstract class Funcionario
             }
         }
         return $funcionarios;
+    }
+
+    // busca um funcionário pelo id e retorna o objeto (gerente/desenvolvedor) correto.
+    public static function findById($db, $id)
+    {
+        $query = "SELECT * FROM funcionarios WHERE id = :id LIMIT 1";
+        $stmt = $db->prepare($query);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($row) {
+            $funcionario = null;
+            // reconstrói o objeto correto
+            switch ($row['tipo']) {
+                case 'gerente':
+                    $funcionario = new Gerente($db);
+                    break;
+                case 'desenvolvedor':
+                    $funcionario = new Desenvolvedor($db);
+                    break;
+                default:
+                    return null; // ou lançar uma exceção
+            }
+
+            $funcionario->setId($row['id']);
+            $funcionario->setNome($row['nome']);
+            $funcionario->setSalario($row['salario']);
+
+            return $funcionario;
+        }
+        return null;
+    }
+
+    // exclui um funcionário do banco de dados pelo id.
+    public static function excluir($db, $id)
+    {
+        $query = "DELETE FROM funcionarios WHERE id = :id";
+        $stmt = $db->prepare($query);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+
+        try {
+            return $stmt->execute();
+        } catch (PDOException $e) {
+            echo "Erro ao excluir: " . $e->getMessage();
+            return false;
+        }
     }
 }
