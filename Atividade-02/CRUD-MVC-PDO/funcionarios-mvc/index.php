@@ -21,7 +21,7 @@ switch ($action) {
         $controller->editar();
         break;
     case 'atualizar':
-        // $controller->atualizar(); // Implementação futura
+        $controller->atualizar();
         break;
     case 'excluir':
         $controller->excluir();
