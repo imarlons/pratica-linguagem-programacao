@@ -1,0 +1,29 @@
+<?php
+
+class Database
+{
+    private $host = '127.0.0.1';
+    private $db_name = 'empresa';
+    private $username = 'root';
+    private $password = '';
+    private $port = 3307;
+    private $conn;
+
+    public function getConnection()
+    {
+        $this->conn = null;
+        try {
+            $dsn = 'mysql:host=' . $this->host . ';port=' . $this->port . ';dbname=' . $this->db_name;
+
+            $this->conn = new PDO(
+                $dsn,
+                $this->username,
+                $this->password
+            );
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $e) {
+            echo 'Erro de conexão: ' . $e->getMessage();
+        }
+        return $this->conn;
+    }
+}
